@@ -1,7 +1,8 @@
 package com.mindfire.Notification_Service.service;
 
-import com.mindfire.Notification_Service.model.UserRegistrationEvent;
 import org.springframework.stereotype.Service;
+
+import com.mindfire.basedomains.dto.UserRegistrationEvent;
 
 @Service
 public interface MailService {
