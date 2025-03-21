@@ -1,7 +1,7 @@
 <configuration debug="true" scan="true" scanPeriod="30 seconds">
     <property name="SERVICE_NAME" value="notification-service"/>
-    <property name="LOG_PATH" value="D:/certificatemanagementlogs/${SERVICE_NAME}"/>
-    <property name="LOG_ARCHIVE" value="D:/certificatemanagementlogs/${SERVICE_NAME}/archive"/>
+    <property name="LOG_PATH" value="/app/logs/${SERVICE_NAME}"/>
+    <property name="LOG_ARCHIVE" value="/app/logs/${SERVICE_NAME}/archive"/>
 
     <appender name="Console-Appender" class="ch.qos.logback.core.ConsoleAppender">
         <layout>
