@@ -1,7 +1,9 @@
-package com.mindfire.Notification_Service.kafka;
+package com.mindfire.notificationService.kafka;
 
-import com.mindfire.Notification_Service.service.MailService;
 import com.mindfire.basedomains.dto.UserRegistrationEvent;
+import com.mindfire.notificationService.service.MailService;
+
+import jakarta.mail.MessagingException;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,9 +20,9 @@ public class UserMailDetailsConsumer {
 	private MailService mailService;
 
 	@KafkaListener(topics = "${spring.kafka.topic.name}", groupId = "${spring.kafka.consumer.group-id}")
-	public void processEmail(UserRegistrationEvent userRegistrationEvent) {
+	public void processEmail(UserRegistrationEvent userRegistrationEvent) throws MessagingException {
 		LOGGER.info("userEvent recieved in email service {}", userRegistrationEvent);
-		mailService.sendEmail(userRegistrationEvent);
+		mailService.sendPasswordResetEmail(userRegistrationEvent);
 	}
 
 }
