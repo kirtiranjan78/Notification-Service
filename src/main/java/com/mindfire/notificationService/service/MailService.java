@@ -4,12 +4,10 @@ import com.mindfire.basedomains.dto.UserRegistrationEvent;
 
 import jakarta.mail.MessagingException;
 
-import org.springframework.stereotype.Service;
 
 /**
  * Service interface for handling email notifications.
  */
-@Service
 public interface MailService {
 
     /**
