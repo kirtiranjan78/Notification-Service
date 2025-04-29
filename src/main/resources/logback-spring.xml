@@ -16,7 +16,7 @@
     <appender name="RollingFile-Appender_Docker" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>${LOG_PATH_DOCKER}/${SERVICE_NAME}.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${LOG_ARCHIVE_DOCKER}/${SERVICE_NAME}-%d{yyyy-MM-dd_HH-mm}.log</fileNamePattern>
+            <fileNamePattern>${LOG_ARCHIVE_DOCKER}/${SERVICE_NAME}-%d{yyyy-MM-dd}.log</fileNamePattern>
             <maxHistory>30</maxHistory>
             <totalSizeCap>10MB</totalSizeCap>
         </rollingPolicy>
@@ -28,7 +28,7 @@
     <appender name="RollingFile-Appender_Local" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>${LOG_PATH_LOCAL}/${SERVICE_NAME}.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>${LOG_ARCHIVE_LOCAL}/${SERVICE_NAME}-%d{yyyy-MM-dd_HH-mm}.log</fileNamePattern>
+            <fileNamePattern>${LOG_ARCHIVE_LOCAL}/${SERVICE_NAME}-%d{yyyy-MM-dd}.log</fileNamePattern>
             <maxHistory>30</maxHistory>
             <totalSizeCap>10MB</totalSizeCap>
         </rollingPolicy>

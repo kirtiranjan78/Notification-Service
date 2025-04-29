@@ -1,7 +1,8 @@
 package com.mindfire.notificationService.service;
 
-import com.mindfire.basedomains.dto.UserRegistrationEvent;
 
+import com.mindfire.commonlibraries.dto.CertificateNotificationEvent;
+import com.mindfire.commonlibraries.dto.UserNotificationEvent;
 import jakarta.mail.MessagingException;
 
 import org.springframework.stereotype.Service;
@@ -31,5 +32,13 @@ public interface MailService {
      * @param userDetails The user details containing the email address, first name, and verification link.
      * @throws MessagingException 
      */
-    void sendPasswordResetEmail(UserRegistrationEvent userDetails) throws MessagingException;
+    void sendPasswordResetEmail(UserNotificationEvent userDetails) throws MessagingException;
+
+    /**
+     * Sends a informational mail regarding the certificate issuance
+     *
+     * @param certificateNotificationEvent The user details containing the email address of the user
+     * @throws MessagingException
+     */
+    void sendCertificateGenerationEmail(CertificateNotificationEvent certificateNotificationEvent) throws MessagingException;
 }
